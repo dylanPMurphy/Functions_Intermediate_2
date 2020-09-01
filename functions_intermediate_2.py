@@ -16,7 +16,7 @@ z = [ {'x': 10, 'y': 20} ]
 #    Change the value 10 in x to 15. Once you're done, x should now be [ [5,2,3], [15,8,9] ].
 x[1][0] = 15
 #   Change the last_name of the first student from 'Jordan' to 'Bryant'
-students[0].first_name = "Bryant"
+students[0]['last_name'] = "Bryant"
 #    In the sports_directory, change 'Messi' to 'Andres'
 sports_directory["soccer"][0] = "Andres"
 #    Change the value 20 in z to 30
@@ -25,8 +25,21 @@ print(x,students,sports_directory,z)
 
 
 
-#    2. Iterate Through a List of Dictionaries	
+#    2. Iterate Through a List of Dictionaries	Create a function iterateDictionary(some_list) that, given a list of dictionaries, the function loops through each dictionary in the list and prints each key and the associated value. For example, given the following list:
+students = [
+    {'first_name':  'Michael', 'last_name' : 'Jordan'},
+    {'first_name' : 'John', 'last_name' : 'Rosales'},
+    {'first_name' : 'Mark', 'last_name' : 'Guillen'},
+    {'first_name' : 'KB', 'last_name' : 'Tonel'}
+]
 
+def iterateDictionary(input_dict):
+    for i in range(0, len(input_dict)): 
+        for x, y in input_dict[i].items():
+            print(x,y)
+
+
+iterateDictionary(students)
 #    3. Get Values From a List of Dictionaries	
 
 #    4. Iterate Through a Dictionary with List Values	
