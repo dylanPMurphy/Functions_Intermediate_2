@@ -56,5 +56,6 @@ dojo = {
 }
 
 def printInfo(input_dict):
-    
+    for i in input_dict:
+        print(input_dict[i])
 printInfo(dojo)
